@@ -1,0 +1,10 @@
+{
+  "name": "12 घंटे Shopping",
+  "short_name": "12 घंटे",
+  "lang": "hi",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f6f0",
+  "theme_color": "#173b2b",
+  "description": "सिद्धार्थनगर और नौगढ़ के लिए लोकल शॉपिंग डेमो"
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14251c">
+  <title>12 घंटे | Local Shopping</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">12</div>
+    <div>
+      <h1>12 घंटे</h1>
+      <p>आपकी खरीदारी, आपके शहर में</p>
+    </div>
+    <span class="location">📍 नौगढ़</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">LOCAL SHOPPING</p>
+      <h2>ज़रूरत का सामान,<br>आपके पास</h2>
+      <p>स्टॉक और इलाके के अनुसार 12 घंटे के अंदर डिलीवरी का लक्ष्य।</p>
+      <label class="search-wrap">
+        <span>⌕</span>
+        <input id="search" type="search" placeholder="सामान खोजें…" aria-label="सामान खोजें">
+      </label>
+    </section>
+
+    <section class="section-head">
+      <div><p class="eyebrow">हमारा स्टॉक</p><h2>प्रोडक्ट्स</h2></div>
+      <span id="product-count" class="muted"></span>
+    </section>
+    <div id="products" class="product-grid"></div>
+
+    <section class="checkout card">
+      <div class="section-head">
+        <div><p class="eyebrow">आपकी पसंद</p><h2>कार्ट <span id="cart-count">(0)</span></h2></div>
+        <button id="clear-cart" class="text-button" type="button">खाली करें</button>
+      </div>
+      <div id="cart-items"><p class="muted">अभी कार्ट खाली है।</p></div>
+      <div class="total-row"><span>कुल</span><strong id="total">₹0</strong></div>
+      <form id="order-form">
+        <label>आपका नाम<input name="customerName" required maxlength="70" placeholder="पूरा नाम"></label>
+        <label>मोबाइल नंबर<input name="phone" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="10 अंकों का नंबर"></label>
+        <label>डिलीवरी का पूरा पता<textarea name="address" required maxlength="350" rows="3" placeholder="मोहल्ला/गाँव, पोस्ट, पिन कोड"></textarea></label>
+        <label>डिलीवरी क्षेत्र
+          <select name="area" required>
+            <option value="">क्षेत्र चुनें</option>
+            <option>नौगढ़</option>
+            <option>सिद्धार्थनगर (अन्य क्षेत्र)</option>
+            <option>पहले फोन करके पुष्टि करें</option>
+          </select>
+        </label>
+        <button class="primary full" type="submit">ऑर्डर रिक्वेस्ट भेजें</button>
+        <p class="small muted">यह डेमो है। ऑर्डर इसी ब्राउज़र में सेव होगा; दुकान को अपने-आप नहीं भेजा जाएगा। असली ऑर्डर लेने से पहले बैकएंड/डेटाबेस जोड़ें।</p>
+      </form>
+    </section>
+
+    <section class="card admin-note">
+      <h2>दुकानदार के लिए</h2>
+      <p>फिलहाल प्रोडक्ट्स <code>app.js</code> में उदाहरण के तौर पर हैं। असली सामान, कीमत और स्टॉक जोड़ने से पहले उन्हें बदलें।</p>
+      <button id="show-orders" class="secondary" type="button">इस डिवाइस के डेमो ऑर्डर देखें</button>
+      <div id="orders-list" class="orders-list" hidden></div>
+    </section>
+  </main>
+
+  <footer><strong>12 घंटे</strong><p>सिद्धार्थनगर और नौगढ़ • सहायता के लिए दुकान से संपर्क करें</p><small>डिलीवरी का समय स्टॉक, दूरी और उपलब्धता पर निर्भर है।</small></footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
